@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:riverpod_easy_level/easy_page.dart';
+import 'package:riverpod_easy_level/hard_page.dart';
 import 'package:riverpod_easy_level/riverpod_data.dart';
 
 void main() {
@@ -18,8 +19,10 @@ class MyApp extends ConsumerWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Brightness brightness =
-        ref.watch(riverpodIsLight) ? Brightness.light : Brightness.dark;
+    //can also use Brightness brightness = ref.watch(riverpodIsLightEasy) ? Brightness.light : Brightness.dark;
+    Brightness brightness = ref.watch(riverpodIsLightHard).isLight
+        ? Brightness.light
+        : Brightness.dark;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -30,7 +33,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const EasyPage(),
+      home: const HardPage(), //replace it with EasyPage(), to see that page ui
     );
   }
 }

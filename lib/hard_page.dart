@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_easy_level/riverpod_data.dart';
 
-class EasyPage extends ConsumerWidget {
-  const EasyPage({super.key});
+class HardPage extends ConsumerWidget {
+  const HardPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,14 +18,16 @@ class EasyPage extends ConsumerWidget {
           children: [
             ElevatedButton.icon(
               onPressed: () {
-                ref.read(riverpodIsLightEasy.notifier).state = true;
+                ref
+                    .read(riverpodIsLightHard.notifier)
+                    .changeTheme(newBool: true);
               },
               label: const Text('Light Mode'),
               icon: const Icon(Icons.light_mode),
             ),
             ElevatedButton.icon(
               onPressed: () {
-                ref.read(riverpodIsLightEasy.notifier).state = false;
+                ref.read(riverpodIsLightHard).changeTheme(newBool: false);
               },
               label: const Text('Dark Mode'),
               icon: const Icon(Icons.dark_mode),
