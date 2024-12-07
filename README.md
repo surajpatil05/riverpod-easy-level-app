@@ -1,20 +1,22 @@
-<<<<<<< HEAD
-# riverpod_easy_level
+This cheatsheet provides a clear structure for working with Riverpod in Flutter:
+Setup
 
-A new Flutter project.
+    Use ProviderScope to wrap the app for Riverpod state management.
 
-## Getting Started
+Easy Level
 
-This project is a starting point for a Flutter application.
+    Use StateProvider for simple state management.
+    Use ConsumerWidget to listen to providers.
+    ref.watch(provider) listens to changes in the provider.
+    ref.read(provider.notifier).state allows direct editing of the state.
 
-A few resources to get you started if this is your first Flutter project:
+Advanced (Model-Based)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    Use ChangeNotifierProvider with a ChangeNotifier class.
+    Call notifyListeners() when changing data.
+    Use ref.watch and ref.read for listening or updating values.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# riverpod-easy-level-app
->>>>>>> 661176ba99cb556407609a31f0679c260d36d4a5
+Key Concept:
+
+    watch = listen for updates.
+    read = get or update values without listening for changes.
