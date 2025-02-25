@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RiverpodModel extends ChangeNotifier {
+class ThemeNotifier extends ChangeNotifier {
   bool isLight;
 
-  RiverpodModel({required this.isLight});
+  ThemeNotifier({required this.isLight});
 
   void changeTheme({required bool newBool}) {
     isLight = newBool;

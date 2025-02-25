@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_easy_level/riverpod_data.dart';
+import 'package:riverpod_easy_level/providers/theme_provider.dart';
 
-class HardPage extends ConsumerWidget {
-  const HardPage({super.key});
+class AdvanceScreen extends ConsumerWidget {
+  const AdvanceScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

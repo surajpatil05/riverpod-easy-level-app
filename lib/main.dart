@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:riverpod_easy_level/hard_page.dart';
-import 'package:riverpod_easy_level/riverpod_data.dart';
+import 'package:riverpod_easy_level/screens/advanced_screen.dart';
+import 'package:riverpod_easy_level/providers/theme_provider.dart';
 
 void main() {
   runApp(
@@ -32,7 +32,8 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HardPage(), //replace it with EasyPage(), to see that page ui
+      home:
+          const AdvanceScreen(), //replace it with EasyPage(), to see that page ui
     );
   }
 }
