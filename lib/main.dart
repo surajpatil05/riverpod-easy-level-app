@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:riverpod_easy_level/easy_page.dart';
 import 'package:riverpod_easy_level/hard_page.dart';
 import 'package:riverpod_easy_level/riverpod_data.dart';
 
